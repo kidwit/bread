@@ -2,7 +2,9 @@ const router = require('express').Router()
 const Bread = require('../models/bread')
 
 router.get('/', (req, res) => {
-    res.send('bread')
+    res.render('index', {
+        breads: Bread
+    }) 
 })
 
 // GET retreive bread by index
